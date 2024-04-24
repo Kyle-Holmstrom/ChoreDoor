@@ -31,7 +31,7 @@ const isClicked = (door) => {
 
 const playDoor = (door) => {
   numClosedDoors--;
-  if (numClosedDoors === 0) {
+  if (numClosedDoors === 1 && isBot(door) === false) {
     gameOver('win');
   } else if (isBot(door) === true) {
     gameOver();
